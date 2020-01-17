@@ -1,5 +1,19 @@
 # projeto-api-crud-net-core-3.1
-Projeto de uma API com CRUD Automático, aplicado designer patterns, testes unitários, documentação da API via Swagger, AutoMapper e Migrations
+Projeto de uma API com CRUD Automático nesse momento para Usuário com a geração de um Token Seguro. Alguns diferencias e técnicas utilizadas nesse projeto:
+ - Designer Patterns e alguns conceitos do SOLID
+ - Testes unitários
+ - Documentação da API via Swagger contemplando Authorization
+ - AutoMapper
+ - Migrations
+ 
+## Estrutura de implementação:
+  - Business: biblioteca que contém todas as regras de negócio e suas respectivas interface e tratamentos 
+  - CadastroAPI: aplicação desenvolvida em .NET Core 3.1 para expor algumas APIs de cadastros e Autenticação
+  - Core: biblioteca que contém todas as classes reutilizadas por toda aplicação
+  - ModelData: biblioteca que contém todos os modelos de dados, view models, e migration
+  - Repository: biblioteca que contém todos os repositórios da aplicação
+  - Tests: biblioteca que contém todos os testes de unidades para garantir uma cobertura de código
+  - Util: biblioteca que contém todos o utilitário da aplicação. Ex: enums, constantes, poderia ser funções, entre outras.
 
 ## Orientação
 
@@ -11,7 +25,7 @@ Update-Database
 
 Com esse comando a aplicação irá criar as estruturas do banco de dados.
 
-Em sequência apertar F5 o projeto será compilado e executado, e apresentará a tela do Swagger, caso não apareça digite: https://localhost:suaporta/swagger
+Em sequência apertar F5 o projeto será compilado e executado, e apresentará a tela do Swagger, caso não apareça digite: https://localhost:{suaporta}/swagger
 
 Se por ventura optar por querer rodar em memória, segue as orientações:
 
