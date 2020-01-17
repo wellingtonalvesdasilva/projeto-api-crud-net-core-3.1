@@ -9,7 +9,7 @@ using ModelData.ViewModel;
 
 namespace CadastroAPI.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : BaseApiController<Usuario, UsuarioViewModel, FiltroUsuario>

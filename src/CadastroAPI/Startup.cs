@@ -26,12 +26,14 @@ namespace CadastroAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+        public IWebHostEnvironment CurrentEnvironment { get; }
+
+        public Startup(IConfiguration configuration, IWebHostEnvironment currentEnvironment)
         {
             Configuration = configuration;
+            CurrentEnvironment = currentEnvironment;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -42,10 +44,13 @@ namespace CadastroAPI
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
-            //Banco em Memória para poder publicar no Azure ou em qualquer servidor sem banco
-            //services.AddDbContext<CadastroCRUDContext>(options => options.UseInMemoryDatabase(databaseName: "CrudCadastroDatabase"));
+            var appSettings = appSettingsSection.Get<AppSettings>();
 
-            services.AddDbContext<CadastroCRUDContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //Banco em Memória para poder publicar no Azure ou em qualquer servidor sem banco ou teste
+            if (CurrentEnvironment.IsEnvironment("Testing"))
+                services.AddDbContext<CadastroCRUDContext>(options => options.UseInMemoryDatabase(databaseName: "CrudCadastroDatabase"));
+            else
+                services.AddDbContext<CadastroCRUDContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //Registra a injeção de dependência dos repositorios
             services.AddScoped<IGenericRepository<Usuario>, UsuarioRepository>();
@@ -95,7 +100,6 @@ namespace CadastroAPI
             });
 
             //Configura o JWT
-            var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.ChaveSecretaToken);
             services.AddAuthentication(x =>
             {

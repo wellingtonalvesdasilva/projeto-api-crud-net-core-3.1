@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroAPI", "CadastroAPI\CadastroAPI.csproj", "{823E7911-D5B9-4133-BAF8-7D5048BBD5AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroAPI", "CadastroAPI\CadastroAPI.csproj", "{823E7911-D5B9-4133-BAF8-7D5048BBD5AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelData", "ModelData\ModelData.csproj", "{334E0F6E-59B9-4F70-9872-857681548C93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelData", "ModelData\ModelData.csproj", "{334E0F6E-59B9-4F70-9872-857681548C93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{244D129B-CFFF-45CC-89B6-39B028BE201A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{244D129B-CFFF-45CC-89B6-39B028BE201A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{40745DFF-9E5A-40AA-95B8-E010F633DF27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{40745DFF-9E5A-40AA-95B8-E010F633DF27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{E56C0289-6635-41D4-A3CE-1822D80A0280}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{7F9F1C88-A0E4-4C62-B3C0-0840A854A7A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{7F9F1C88-A0E4-4C62-B3C0-0840A854A7A5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Util", "Util\Util.csproj", "{3757B05D-C5A3-4E44-8E79-1FB62A1B526C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{1448B15E-9014-4F5D-B6D3-F7D4EAC1B994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroAPI.TesteDeIntegracao", "CadastroAPI.TesteDeIntegracao\CadastroAPI.TesteDeIntegracao.csproj", "{F9945F52-0C9E-4DC0-B438-873F5CC69A5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +41,6 @@ Global
 		{40745DFF-9E5A-40AA-95B8-E010F633DF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40745DFF-9E5A-40AA-95B8-E010F633DF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40745DFF-9E5A-40AA-95B8-E010F633DF27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E56C0289-6635-41D4-A3CE-1822D80A0280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E56C0289-6635-41D4-A3CE-1822D80A0280}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E56C0289-6635-41D4-A3CE-1822D80A0280}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E56C0289-6635-41D4-A3CE-1822D80A0280}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7F9F1C88-A0E4-4C62-B3C0-0840A854A7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F9F1C88-A0E4-4C62-B3C0-0840A854A7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F9F1C88-A0E4-4C62-B3C0-0840A854A7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,9 +49,16 @@ Global
 		{3757B05D-C5A3-4E44-8E79-1FB62A1B526C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3757B05D-C5A3-4E44-8E79-1FB62A1B526C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3757B05D-C5A3-4E44-8E79-1FB62A1B526C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9945F52-0C9E-4DC0-B438-873F5CC69A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9945F52-0C9E-4DC0-B438-873F5CC69A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9945F52-0C9E-4DC0-B438-873F5CC69A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9945F52-0C9E-4DC0-B438-873F5CC69A5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9945F52-0C9E-4DC0-B438-873F5CC69A5E} = {1448B15E-9014-4F5D-B6D3-F7D4EAC1B994}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3815D596-B9AB-4D38-A193-3E0A8835B438}

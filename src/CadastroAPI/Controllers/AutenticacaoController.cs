@@ -25,6 +25,5 @@ namespace CadastroAPI.Controllers
 
             return Ok(tokenDeAcesso);
         }
-
     }
 }
