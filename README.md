@@ -1,7 +1,7 @@
 # projeto-api-crud-net-core-3.1
 Projeto de uma API com CRUD Automático nesse momento para Usuário com a geração de um Token Seguro. Alguns diferencias e técnicas utilizadas nesse projeto:
  - Designer Patterns e alguns conceitos do SOLID
- - Testes unitários
+ - Testes de integração da API
  - Documentação da API via Swagger contemplando Authorization
  - AutoMapper
  - Migrations
@@ -12,7 +12,7 @@ Projeto de uma API com CRUD Automático nesse momento para Usuário com a geraç
   - Core: biblioteca que contém todas as classes reutilizadas por toda aplicação
   - ModelData: biblioteca que contém todos os modelos de dados, view models, e migration
   - Repository: biblioteca que contém todos os repositórios da aplicação
-  - Tests: biblioteca que contém todos os testes de unidades para garantir uma cobertura de código
+  - CadastroAPI.TesteDeIntegracao: biblioteca que contém todos os testes de integração para garantir uma cobertura de código
   - Util: biblioteca que contém todos o utilitário da aplicação. Ex: enums, constantes, poderia ser funções, entre outras.
 
 ## Orientação
@@ -40,3 +40,10 @@ Em seguida comentar o código da linha 48, ficando assim:
 ```
 
 Basicamente é isso, e para demonstração de uso da API, utilizar o Swagger, pois esse projeto contempla apenas o back-end.
+
+## Futuras alterações
+  - Terminar de fazer o teste de integração em todas as alterações faltou fazer a da operação POST e DELETE.
+  - Fazer um DE PARA automático das informações que veio da requisição com as informações que estão no banco.
+  - Refatorar algumas operações criando extensões para facilitar operações futuras.
+
+
